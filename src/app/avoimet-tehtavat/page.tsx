@@ -1,4 +1,10 @@
-import React from "react";
+type JobItem = {
+  title?: string;
+  link?: string;
+  description?: string;
+  pubDate?: string;
+};
+
 import { parseStringPromise } from "xml2js";
 
 export default async function AvoimetTehtavatPage() {
@@ -15,10 +21,8 @@ export default async function AvoimetTehtavatPage() {
     if (!items) {
       error = 'RSS feed does not contain any items.';
     } else {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       if (!Array.isArray(items)) items = [items];
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      jobs = items.map((item: any) => ({
+      jobs = (items as JobItem[]).map((item) => ({
         title: item.title || "",
         link: item.link || "",
         description: item.description || "",

@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Yhteydenotto() {
   return (
     <main className="flex flex-col items-center px-2 sm:px-0 mt-8 mb-12 min-h-[70vh]">

@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Home() {
   return (
     <main className="flex-1 w-full flex flex-col items-center px-2 sm:px-0 mt-8 mb-12">
