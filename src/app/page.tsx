@@ -1,13 +1,5 @@
 import React from "react";
 
-const navItems = [
-  { label: "Palvelut", href: "/palvelut" },
-  { label: "Ehdokkaille", href: "#ehdokkaille" },
-  { label: "Avoimet Tehtävät", href: "#avoimet" },
-  { label: "Yhteydenotto", href: "#yhteydenotto" },
-  { label: "Tiimi", href: "#tiimi" },
-];
-
 export default function Home() {
   return (
     <main className="flex-1 w-full flex flex-col items-center px-2 sm:px-0 mt-8 mb-12">
@@ -50,7 +42,7 @@ export default function Home() {
         <section id="tulevaisuus" className="bg-white/80 rounded-xl shadow p-6 flex flex-col gap-3">
           <h2 className="text-xl font-semibold text-blue-800">Tulevaisuus on kulttuurin muotoilua</h2>
           <p className="text-gray-800 leading-relaxed">
-            Työelämä on murroksessa. Perinteinen rekrytointilogiikka – "osaaminen + kokemus = oikea valinta" – ei enää riitä. Haluamme auttaa yrityksiä tunnistamaan omat arvonsa ja löytämään ihmiset, jotka voivat aidosti viedä kulttuuria eteenpäin. Samalla autamme ammattilaisia löytämään paikan, jossa heidän arvonsa ja merkityksensä kohtaavat työn.
+            Työelämä on murroksessa. Perinteinen rekrytointilogiikka – &quot;osaaminen + kokemus = oikea valinta&quot; – ei enää riitä. Haluamme auttaa yrityksiä tunnistamaan omat arvonsa ja löytämään ihmiset, jotka voivat aidosti viedä kulttuuria eteenpäin. Samalla autamme ammattilaisia löytämään paikan, jossa heidän arvonsa ja merkityksensä kohtaavat työn.
           </p>
         </section>
       </div>

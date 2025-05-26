@@ -10,12 +10,14 @@ export default async function AvoimetTehtavatPage() {
     const xml = await res.text();
     const parsed = await parseStringPromise(xml, { explicitArray: false });
     // Debug: log the parsed structure
-    console.log('Parsed RSS:', JSON.stringify(parsed, null, 2));
+    // console.log('Parsed RSS:', JSON.stringify(parsed, null, 2));
     let items = parsed?.rss?.channel?.item;
     if (!items) {
       error = 'RSS feed does not contain any items.';
     } else {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       if (!Array.isArray(items)) items = [items];
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       jobs = items.map((item: any) => ({
         title: item.title || "",
         link: item.link || "",
@@ -23,7 +25,7 @@ export default async function AvoimetTehtavatPage() {
         pubDate: item.pubDate || "",
       }));
     }
-  } catch (e) {
+  } catch {
     error = 'Virhe RSS-syötteen haussa tai käsittelyssä.';
   }
 
